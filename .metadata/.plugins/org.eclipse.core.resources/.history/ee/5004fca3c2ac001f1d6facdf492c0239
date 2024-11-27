@@ -73,7 +73,7 @@ public class Calculate3 {
         }
     }
     public static void log(Scanner scanner) {
-    	System.out.print("1.Log \n2.Common Log\nEnter Number:");
+    	System.out.println("1.Log \n2.Common Log\nEnter Number:");
     	double num1 = scanner.nextDouble();
     	scanner.nextLine();
     	System.out.print("Enter Number: ");
@@ -81,11 +81,11 @@ public class Calculate3 {
     	scanner.nextLine();
     	
     	if (num1 == 1) {
-    		System.out.println(Math.log(num2));
+    		System.out.print(Math.log(num2));
     	}else if (num1 == 2) {
-    		System.out.println(Math.log10(num2));
+    		System.out.print(Math.log10(num2));
     	}else {
-    		System.out.println("You Input Wrong Number");
+    		System.out.print("You Input Wrong Number");
     	}
     }
 }

@@ -73,10 +73,10 @@ public class Calculate3 {
         }
     }
     public static void log(Scanner scanner) {
-    	System.out.print("1.Log \n2.Common Log\nEnter Number:");
+    	System.out.println("1.Log \n2.Common Log\nEnter Number:");
     	double num1 = scanner.nextDouble();
     	scanner.nextLine();
-    	System.out.print("Enter Number: ");
+    	System.out.println("Enter Number: ");
     	double num2 = scanner.nextDouble();
     	scanner.nextLine();
     	
