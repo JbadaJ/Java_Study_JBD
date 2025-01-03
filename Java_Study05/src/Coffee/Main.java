@@ -1,25 +1,18 @@
 package Coffee;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // 커피 리스트 생성
-        List<Coffee> coffeeList = new ArrayList<>();
-        List<Receipt> orderList = new ArrayList<>();
-        coffeeList.add(new Coffee("Americano", 4000));
-        coffeeList.add(new Coffee("Latte", 4500));
-        coffeeList.add(new Coffee("Espresso", 3500));
-        coffeeList.add(new Coffee("Cappuccino", 5000));
-        orderList.add(new Receipt("first order", 8000));
-        // 메뉴판 출력
-        System.out.println("=== Coffee Menu ===");
-        for (Coffee coffee : coffeeList) {
-            System.out.println(coffee.getName() + " : " + coffee.getPrice() + "원");
-        }
-        System.out.println("\n===Total Order===");
-        for (Receipt receipt : orderList) {
-        	System.out.println(receipt.getName() + ": " + receipt.getPrice() + "원");}
+        Scanner scanner = new Scanner(System.in);
+
+        Menu menu = new Menu();
+        menu.makeMenu();     // 메뉴 초기화
+        menu.showMenu();     // 메뉴 출력
+
+        int totalPrice = menu.cash(scanner); // 커피 주문 및 총합 계산
+        System.out.println("총 결제 금액: " + totalPrice + "원");
+
+        scanner.close();
     }
 }
