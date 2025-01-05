@@ -11,10 +11,16 @@ public class Main {
         menu.showMenu();     // 메뉴 출력
 
         int totalPrice = menu.cash(scanner); // 커피 주문 및 총합 계산
-
         Receipt r1 = new Receipt("Order1",totalPrice);
+        
         System.out.println("총 결제 금액: " + totalPrice + "원");
         System.out.println("영수증: "+ r1.getName() +"- "+ r1.getPrice());
+        
+        totalPrice = menu.cash(scanner);
+        Receipt r2 = new Receipt("Order2",totalPrice);
+        
+        System.out.println("총 결제 금액: " + totalPrice + "원");
+        System.out.println("영수증: "+ r2.getName() +"- "+ r2.getPrice());
 
         scanner.close();
     }
